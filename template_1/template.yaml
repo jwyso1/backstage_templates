@@ -1,17 +1,17 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: react-ssr-template
-  title: React SSR Template
-  description: Create a website powered with Next.js
+  name: python-template-1
+  title: python-template-1
+  description: Dummy template 1
   tags:
     - recommended
-    - react
+    - python
 spec:
-  owner: web@example.com
-  type: website
+  owner: v-jwysokinski@expediagroup.com
+  type: lambda
   parameters:
-    - title: Provide some simple information
+    - title: Provide information about project
       required:
         - project_name
         - owner
@@ -28,11 +28,27 @@ spec:
         owner:
           title: Owner
           type: string
-          description: Owner of the component
+          description: Owner of the component (Can be backstage group/team)
           ui:field: OwnerPicker
           ui:options:
             allowedKinds:
               - Group
+        cloud_provider:
+          volume_type:
+            title: Cloud provider
+            type: string
+            description: Cloud provider 
+            default: aws
+            enum:
+              - aws
+              - gcp
+              - azure
+            enumNames:
+              - 'Amazon Web Services (aws)'
+              - 'Google Cloud Platform (gcp)'
+              - 'Microsoft Azure (azure)'
+
+          
     - title: Choose a location
       required:
         - repoUrl
@@ -57,6 +73,13 @@ spec:
           description: ${{ parameters.description }}
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
           owner: ${{ parameters.owner }}
+          project_specific_value: 1
+          command_line_interface: argparse
+          pypi_username: TODO
+          project_slug: {{ values.project_name.lower().replace(' ', '_').replace('-', '_') }}
+          version: 0.1.0
+          create_author_file: y
+          open_source_license: Not open source
 
     - id: publish
       name: Publish

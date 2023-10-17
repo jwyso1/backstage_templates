@@ -1,5 +1,5 @@
 {
-  "name": "${{ values.component_id }}",
+  "name": "${{ values.project_name }}",
   "version": "0.0.0",
   "description": "${{ values.description }}",
   "license": "UNLICENSED",

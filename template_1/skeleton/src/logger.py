@@ -1,1 +1,1 @@
-{%- include '..\..\..\common_templates\logger_test.py' -%}
+{%- include '..\..\..\common_templates\logger.py' -%}

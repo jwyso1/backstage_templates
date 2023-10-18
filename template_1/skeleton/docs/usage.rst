@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use {{ values.project_name }} in a project::
+To use {{ cookiecutter.project_name }} in a project::
 
-    import {{ values.project_slug }}
+    import {{ cookiecutter.project_slug }}

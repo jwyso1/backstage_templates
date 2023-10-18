@@ -1,6 +1,6 @@
-# ${{ values.project_name }}
+# ${{ cookiecutter.project_name }}
 
-${{ values.description }}
+${{ cookiecutter.description }}
 
 ## Getting started
 

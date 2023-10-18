@@ -1,14 +1,14 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ${{values.project_name | dump}}
-  {%- if values.description %}
-  description: ${{values.description | dump}}
+  name: ${{cookiecutter.project_name | dump}}
+  {%- if cookiecutter.description %}
+  description: ${{cookiecutter.description | dump}}
   {%- endif %}
   annotations:
-    github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
+    github.com/project-slug: ${{cookiecutter.destination.owner + "/" + cookiecutter.destination.repo}}
     backstage.io/techdocs-ref: dir:.
 spec:
   type: website
   lifecycle: experimental
-  owner: ${{values.owner | dump}}
+  owner: ${{cookiecutter.owner | dump}}

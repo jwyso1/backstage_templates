@@ -1,20 +1,20 @@
-"""Console script for ${{ values.project_name }}."""
+"""Console script for ${{ cookiecutter.project_name }}."""
 
-{%- if values.command_line_interface|lower == 'argparse' %}
+{%- if cookiecutter.command_line_interface|lower == 'argparse' %}
 import argparse
 {%- endif %}
 import sys
 
-{%- if values.command_line_interface|lower == 'argparse' %}
+{%- if cookiecutter.command_line_interface|lower == 'argparse' %}
 def main():
-    """Console script for ${{ values.project_name }}."""
+    """Console script for ${{ cookiecutter.project_name }}."""
     parser = argparse.ArgumentParser()
     parser.add_argument('_', nargs='*')
     args = parser.parse_args()
 
     print("Arguments: " + str(args._))
     print("Replace this message by putting your code into "
-          "${{ values.project_name }}.cli.main")
+          "${{ cookiecutter.project_name }}.cli.main")
     return 0
 {%- endif %}
 

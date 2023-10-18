@@ -2,7 +2,7 @@
 History
 =======
 
-{{ values.version }} {{ values.time }}
+{{ cookiecutter.version }} {{ cookiecutter.time }}
 ------------------
 
 * First release on PyPI.

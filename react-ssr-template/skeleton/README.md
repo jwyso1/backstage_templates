@@ -1,8 +1,8 @@
-# ${{ values.project_name }}
+# ${{ cookiecutter.project_name }}
 
 ## Description
 
-${{ values.description }}
+${{ cookiecutter.description }}
 
 ## Develop
 

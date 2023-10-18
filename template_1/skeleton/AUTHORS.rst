@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* {{ values.owner }}
+* {{ cookiecutter.owner }}
 
 Contributors
 ------------

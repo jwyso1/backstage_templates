@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "{{values.project_name}}"
+name = "{{cookiecutter.project_name}}"
 version = "0.1.0"
 license = {file = "LICENSE.txt"}
 description = ""
@@ -79,7 +79,7 @@ junit_family = "legacy"
 [tool.coverage.run]
 branch = true
 command_line = '-m pytest'
-source = ['{{values.project_name}}/']
+source = ['{{cookiecutter.project_name}}/']
 
 [tool.coverage.report]
 precision = 2

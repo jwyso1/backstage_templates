@@ -1,7 +1,7 @@
 {
-  "name": "${{ values.project_name }}",
+  "name": "${{ cookiecutter.project_name }}",
   "version": "0.0.0",
-  "description": "${{ values.description }}",
+  "description": "${{ cookiecutter.description }}",
   "license": "UNLICENSED",
   "scripts": {
     "dev": "next",

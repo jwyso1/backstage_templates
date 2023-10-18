@@ -1,4 +1,4 @@
-Welcome to {{ values.project_name }}'s documentation!
+Welcome to {{ cookiecutter.project_name }}'s documentation!
 ======================================
 
 .. toctree::
@@ -10,7 +10,7 @@ Welcome to {{ values.project_name }}'s documentation!
    usage
    modules
    contributing
-   {% if values.create_author_file == 'y' -%}authors
+   {% if cookiecutter.create_author_file == 'y' -%}authors
    {% endif -%}history
 
 Indices and tables

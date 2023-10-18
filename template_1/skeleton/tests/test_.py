@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-"""Tests for `{{ values.project_slug }}` package."""
+"""Tests for `{{ cookiecutter.project_slug }}` package."""
 
 import pytest
 
-from {{ values.project_slug }} import {{ values.project_slug }}
+from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
 
 
 @pytest.fixture

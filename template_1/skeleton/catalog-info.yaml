@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ${{values.project_name}}
+  name: {{values.project_name}}
   {%- if values.description %}
   description: {{values.description}}
   {%- endif %}

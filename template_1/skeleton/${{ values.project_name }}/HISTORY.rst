@@ -2,7 +2,7 @@
 History
 =======
 
-{{ values.version }} ({% time %})
+{{ values.version }} {{% time %}}
 ------------------
 
 * First release on PyPI.

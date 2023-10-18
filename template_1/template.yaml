@@ -34,19 +34,18 @@ spec:
             allowedKinds:
               - Group
         cloud_provider:
-          volume_type:
-            title: Cloud provider
-            type: string
-            description: Cloud provider 
-            default: aws
-            enum:
-              - aws
-              - gcp
-              - azure
-            enumNames:
-              - 'Amazon Web Services (aws)'
-              - 'Google Cloud Platform (gcp)'
-              - 'Microsoft Azure (azure)'
+          title: Cloud provider
+          type: string
+          description: Cloud provider
+          default: aws
+          enum:
+            - aws
+            - gcp
+            - azure
+          enumNames:
+            - 'Amazon Web Services (aws)'
+            - 'Google Cloud Platform (gcp)'
+            - 'Microsoft Azure (azure)'
 
           
     - title: Choose a location

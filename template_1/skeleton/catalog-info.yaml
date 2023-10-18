@@ -2,6 +2,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: {{values.project_name}}
+  description1: {{values.description}}
+  description2: {{cookiecutter.description}}
+  description3: ${{values.description}}
+  description4: ${{cookiecutter.description}}
   {%- if values.description %}
   description: {{values.description}}
   {%- endif %}

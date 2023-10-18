@@ -6,7 +6,7 @@ metadata:
   description: {{cookiecutter.description}}
   {%- endif %}
   annotations:
-    github.com/project-slug: {{cookiecutter.destination}}
+    github.com/project-slug: {{cookiecutter.destination.repo}}
     backstage.io/techdocs-ref: dir:.
 spec:
   type: website

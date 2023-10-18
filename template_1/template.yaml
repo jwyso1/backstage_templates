@@ -67,7 +67,7 @@ spec:
         cookiecutterCompat: true
         url: ./skeleton
         copyWithoutRender:
-          - ${{ values.project_name }}/.github/workflows/*
+          - **.yml
         values:
           project_name: ${{ parameters.project_name }}
           description: ${{ parameters.description }}

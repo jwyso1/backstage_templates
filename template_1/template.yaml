@@ -80,6 +80,7 @@ spec:
           version: 0.1.0
           create_author_file: y
           open_source_license: Not open source
+          time: $(Get-Date -Format "YYYYMMDDThhmmssZ")
 
     - id: publish
       name: Publish

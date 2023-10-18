@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = '{{ values.project_name }}'
-copyright = "{% now 'local', '%Y' %}, {{ values.owner }}"
+copyright = "{% time %}, {{ values.owner }}"
 author = "{{ values.owner }}"
 
 # The version info for the project you're documenting, acts as replacement

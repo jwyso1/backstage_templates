@@ -1,7 +1,7 @@
 {% if values.open_source_license == 'MIT license' -%}
 MIT License
 
-Copyright (c) {% time '%Y' %}, {{ values.owner }}
+Copyright (c) {% time %}, {{ values.owner }}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

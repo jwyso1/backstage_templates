@@ -60,11 +60,11 @@ spec:
             allowedHosts:
               - github.com
   steps:
-    - id: fetch-docs
+    - id: fetch-common-templates
       name: Fetch common templates
       action: fetch:plain
       input:
-        targetPath: ./common_templates
+        targetPath: ./skeleton/common_templates
         url: https://github.com/jwyso1/backstage_templates/tree/main/common_templates
     - id: template
       name: Fetch Skeleton + Template

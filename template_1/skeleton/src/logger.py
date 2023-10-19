@@ -1,1 +1,1 @@
-{% include "main.py" %}
+{% extends "main.py" %}

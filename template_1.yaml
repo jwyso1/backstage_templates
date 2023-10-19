@@ -66,7 +66,7 @@ spec:
       input:
         files:
           - from: common_templates
-            to: template_1/skeleton/common_templates
+            to: template_1/skeleton
     - id: template
       name: Fetch Skeleton + Template
       action: fetch:template

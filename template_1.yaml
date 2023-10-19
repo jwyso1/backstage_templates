@@ -60,6 +60,13 @@ spec:
             allowedHosts:
               - github.com
   steps:
+    - action: fs:rename
+      id: rename-files
+      name: Acquire templates
+      input:
+        files:
+          - from: common_templates
+            to: template_1/skeleton/common_templates
     - id: template
       name: Fetch Skeleton + Template
       action: fetch:template

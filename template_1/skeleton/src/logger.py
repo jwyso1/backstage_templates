@@ -1,4 +1,4 @@
-{% include "template_1/logger.py" %}
+{% include "../template_1/logger.py" %}
 
 
 

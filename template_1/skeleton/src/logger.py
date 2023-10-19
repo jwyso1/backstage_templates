@@ -1,1 +1,1 @@
-{% extends "./main.py" %}
+{% extends "src/main.py" %}

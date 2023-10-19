@@ -1,1 +1,1 @@
-{% include "src/main.py" %}
+{% include "main.py" %}

@@ -25,10 +25,12 @@ spec:
           title: Description
           type: string
           description: Help others understand what this website is for.
+          default: desc
         owner:
           title: Owner
           type: string
           description: Owner of the component (Can be backstage group/team)
+          default: jwyso1
           ui:field: OwnerPicker
           ui:options:
             allowedKinds:
@@ -66,7 +68,7 @@ spec:
       input:
         cookiecutterCompat: true
         url: ./skeleton
-        copyWithoutRender:
+        copyWithoutTemplating:
           - .github/workflows/*
         values:
           project_name: ${{ parameters.project_name }}

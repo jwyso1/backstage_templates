@@ -60,13 +60,12 @@ spec:
             allowedHosts:
               - github.com
   steps:
-    - action: fs:rename
-      id: rename-files
-      name: Acquire templates
+    - id: fetch-docs
+      name: Fetch common templates
+      action: fetch:plain
       input:
-        files:
-          - from: common_templates
-            to: template_1/skeleton
+        targetPath: ./template_1
+        url: https://github.com/jwyso1/backstage_templates/tree/main/common_templates
     - id: template
       name: Fetch Skeleton + Template
       action: fetch:template

@@ -1,1 +1,1 @@
-{% include "main.py" %}
+{% include "template_1/skeleton/src/main.py" %}

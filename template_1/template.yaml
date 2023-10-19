@@ -68,6 +68,8 @@ spec:
         url: ./skeleton
         copyWithoutRender:
           - .github/workflows/*
+        copyWithoutTemplating:
+          - ../common_templates
         values:
           project_name: ${{ parameters.project_name }}
           description: ${{ parameters.description }}

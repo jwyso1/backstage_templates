@@ -61,12 +61,12 @@ spec:
               - github.com
   steps:
     - action: fs:rename
-        id: rename-files
-        name: Acquire templates
-        input:
-          files:
-            - from: ../common_templates
-              to: ./skeleton/common_templates
+      id: rename-files
+      name: Acquire templates
+      input:
+        files:
+          - from: ../common_templates
+            to: ./skeleton/common_templates
     - id: template
       name: Fetch Skeleton + Template
       action: fetch:template

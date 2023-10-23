@@ -9,6 +9,7 @@ metadata:
     file: docs/docs.yaml
   annotations:
     github.com/project-slug: {{cookiecutter.destination.repo}}
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: website
   lifecycle: experimental

@@ -68,7 +68,7 @@ spec:
       input:
         url: templates
         copyWithoutRender:
-          - .github/workflows/*
+          - template_1/github/workflows/*
           - template_2
         values:
           project_name: ${{ parameters.project_name }}
@@ -91,6 +91,7 @@ spec:
       name: Publish
       action: publish:github
       input:
+        sourcePath: template_1
         allowedHosts: ["github.com"]
         description: This is ${{ parameters.project_name }}
         repoUrl: ${{ parameters.repoUrl }}

@@ -57,6 +57,12 @@ spec:
           default: false
 
   steps:
+    - id: fetch-common_templates
+      name: Fetch Common_templates
+      action: fetch:plain
+      input:
+        url: ../common_templates
+        targetPath: ./skeleton
     - id: fetch-base
       name: Fetch Base
       action: fetch:cookiecutter

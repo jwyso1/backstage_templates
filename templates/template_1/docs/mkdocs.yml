@@ -1,5 +1,5 @@
-site_name: ${{values.component_id}}
-site_description: ${{values.description}}
+site_name: ${{cookiecutter.component_id}}
+site_description: ${{cookiecutter.description}}
 
 nav:
   - Home: index.md

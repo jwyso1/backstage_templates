@@ -81,7 +81,7 @@ spec:
           cloud_provider_full_name: ${{ parameters.cloud_provider.enumNames }}
           project_specific_value: 1
           command_line_interface: argparse
-          pypi_username: TODO
+          pypi_username: TODO SS
           project_slug: ${{ parameters.project_name | lower | replace(" ", "_") | replace("-", "_") }}
           version: 0.1.0
           create_author_file: y

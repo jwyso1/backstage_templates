@@ -3,7 +3,7 @@ name = "{{cookiecutter.project_name}}"
 version = "0.1.0"
 license = {file = "LICENSE.txt"}
 description = ""
-readme = "README.md"
+readme = "docs/README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"

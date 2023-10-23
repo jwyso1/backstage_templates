@@ -1,8 +1,6 @@
-=======
-History
-=======
+# HISTORY
 
-{{ cookiecutter.version }} {% now 'utc', '%a, %d %b %Y %H:%M:%S' %}
+{{ cookiecutter.version }} {% now 'utc', '%d %b %Y' %}
 ------------------
 
 * First release on PyPI.

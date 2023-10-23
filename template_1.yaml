@@ -62,14 +62,14 @@ spec:
             allowedHosts:
               - github.com
   steps:
-    - id: template
-      name: Fetch Skeleton + Template
-      action: fetch:template
+    - id: fetch-base
+      name: Fetch and filling template
+      action: fetch:cookiecutter
       input:
-        cookiecutterCompat: true
-        url: ./skeleton
-        copyWithoutTemplating:
+        url: templates
+        copyWithoutRender:
           - .github/workflows/*
+          - template_2
         values:
           project_name: ${{ parameters.project_name }}
           description: ${{ parameters.description }}

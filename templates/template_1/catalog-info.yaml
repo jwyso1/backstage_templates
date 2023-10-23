@@ -2,9 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: {{cookiecutter.project_name}}
-  {%- if cookiecutter.description %}
   description: {{cookiecutter.description}}
-  {%- endif %}
   docs:
     file: docs/docs.yaml
   annotations:
@@ -13,4 +11,4 @@ metadata:
 spec:
   type: website
   lifecycle: experimental
-  owner: {{cookiecutter.owner | dump}}
+  owner: {{cookiecutter.owner}}

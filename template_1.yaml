@@ -112,7 +112,12 @@ spec:
       if: ${{ parameters.dryRun }}
       action: debug:log
       input:
-        listWorkspace: true
+        message: ${{ parameters }}
+    - name: Results
+      if: ${{ parameters.dryRun }}
+      action: debug:log
+      input:
+        message: ${{ values }}
   output:
     links:
       - title: Repository

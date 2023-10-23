@@ -1,9 +1,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: cookiecutter-demo-2
-  title: Cookiecutter Test outisde of folder
-  description: Cookiecutter example  outisde of folder
+  name: cookiecutter-demo-2.
+  title: Cookiecutter Test outisde of folder.
+  description: Cookiecutter example  outisde of folder.
 spec:
   owner: backstage/techdocs-core
   type: service
@@ -66,6 +66,7 @@ spec:
         url: templates
         copyWithoutRender:
           - templates/template_1
+          - template_1
         values:
           name: ${{ parameters.name }}
           owner: ${{ parameters.owner }}

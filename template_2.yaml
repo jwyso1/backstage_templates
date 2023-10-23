@@ -58,15 +58,13 @@ spec:
       input:
         files:
           - templates/template_1
+          - template_1
 
     - id: fetch-base
       name: Fetch Base
       action: fetch:cookiecutter
       input:
         url: templates
-        copyWithoutRender:
-          - templates/template_1
-          - template_1
         values:
           name: ${{ parameters.name }}
           owner: ${{ parameters.owner }}

@@ -83,7 +83,7 @@ spec:
           command_line_interface: argparse
           pypi_username: TODO
 #          project_slug: ${{ parameters.project_name }}
-          project_slug: {{ cookiecutter.project_name |lower | replace(" ", "_") | replace("-", "_") }}
+          project_slug: {{ cookiecutter.project_name | lower | replace(" ", "_") | replace("-", "_") }}
           version: 0.1.0
           create_author_file: y
           open_source_license: Not open source

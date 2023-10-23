@@ -8,7 +8,11 @@ metadata:
   annotations:
     github.com/project-slug: {{cookiecutter.destination.repo}}
     backstage.io/techdocs-ref: dir:.
+  tags:
+      - python
 spec:
   type: website
-  lifecycle: experimental
+  lifecycle: experimental  # TODO change to "production" when basic functionality works
   owner: {{cookiecutter.owner}}
+
+# TODO add more parameters, see them at https://backstage.io/docs/features/software-catalog/descriptor-format/

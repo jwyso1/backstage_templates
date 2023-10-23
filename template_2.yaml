@@ -52,29 +52,13 @@ spec:
               - github.com
 
   steps:
-    - name: Results1
-      action: debug:log
-      input:
-        listWorkspace: true
-
-    - id: delete-other-templates
-      name: delete other templates
-      action: fs:delete
-      input:
-        files:
-          - templates/template_1
-          - template_1
-
-    - name: Results2
-      action: debug:log
-      input:
-        listWorkspace: true
-
     - id: fetch-base
       name: Fetch Base
       action: fetch:cookiecutter
       input:
         url: templates
+        copyWithoutRender:
+          - template_1
         values:
           name: ${{ parameters.name }}
           owner: ${{ parameters.owner }}
@@ -98,7 +82,7 @@ spec:
         repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
         catalogInfoPath: "/catalog-info.yaml"
 
-    - name: Results3
+    - name: Results
       action: debug:log
       input:
         listWorkspace: true

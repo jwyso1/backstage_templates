@@ -57,13 +57,13 @@ spec:
       action: fs:delete
       input:
         files:
-          - template_1
+          - templates/template_1
 
     - id: fetch-base
       name: Fetch Base
       action: fetch:cookiecutter
       input:
-        url: .
+        url: templates
         values:
           name: ${{ parameters.name }}
           owner: ${{ parameters.owner }}

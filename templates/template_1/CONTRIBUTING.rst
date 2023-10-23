@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues.
+Report bugs at {{cookiecutter.destination.repo}}/{{ cookiecutter.project_slug }}/issues.
 
 If you are reporting a bug, please include:
 

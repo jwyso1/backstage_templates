@@ -64,6 +64,8 @@ spec:
       action: fetch:cookiecutter
       input:
         url: templates
+        copyWithoutRender:
+          - templates/template_1
         values:
           name: ${{ parameters.name }}
           owner: ${{ parameters.owner }}

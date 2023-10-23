@@ -1,0 +1,6 @@
+docs:
+  version: 1
+  title: My Template Documentation
+  description: This is the documentation for my template.
+  sources:
+    - docs/

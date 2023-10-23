@@ -12,9 +12,5 @@ class Logger:
         handler.setLevel(log_level)
         format = logging.Formatter(t_logger.default_formatter)
         handler.setFormatter(format)
-    
-        
-if __name__ == "__main__":
-    print("works")
 
 

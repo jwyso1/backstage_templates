@@ -20,7 +20,6 @@ spec:
           title: Name
           type: string
           description: Unique name of the project
-          ui:field: EntityNamePicker
         description:
           title: Description
           type: string
@@ -60,6 +59,7 @@ spec:
         repoUrl:
           title: Repository Location
           type: string
+          default: ${{ parameters.project_name | lower | replace(" ", "_") | replace("-", "_") }}
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:

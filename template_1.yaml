@@ -112,12 +112,12 @@ spec:
       if: ${{ parameters.dryRun }}
       action: debug:log
       input:
-        message: ${{ parameters }}
+        message: "${{ parameters }}"
     - name: Results
       if: ${{ parameters.dryRun }}
       action: debug:log
       input:
-        message: ${{ values }}
+        message: "${{ values.items() }}"
   output:
     links:
       - title: Repository

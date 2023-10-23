@@ -1,26 +1,31 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: cookiecutter-demo-3
-  title: Cookiecutter Test outisde of folder3
-  description: Cookiecutter example  outisde of folder3
+  name: python-template-2
+  title: python-template-2
+  description: Dummy template 2
+  tags:
+    - recommended
+    - python
 spec:
-  owner: backstage/techdocs-core
+  owner: v-jwysokinski@expediagroup.com
   type: service
-
   parameters:
-    - title: Fill in some steps
+    - title: Provide information about project
       required:
-        - name
+        - project_name
         - owner
       properties:
-        name:
-          title: Name
+        project_name:
+          title: project name
           type: string
-          description: Unique name of the component
-          ui:autofocus: true
-          ui:options:
-            rows: 5
+          description: Unique name of the project
+          ui:field: EntityNamePicker
+        description:
+          title: Description
+          type: string
+          description: Help others understand what this website is for.
+          default: desc
         owner:
           title: Owner
           type: string
@@ -29,15 +34,6 @@ spec:
           ui:options:
             catalogFilter:
               kind: Group
-        system:
-          title: System
-          type: string
-          description: System of the component
-          ui:field: EntityPicker
-          ui:options:
-            catalogFilter:
-              kind: System
-            defaultKind: System
 
     - title: Choose a location
       required:
@@ -62,7 +58,6 @@ spec:
         values:
           name: ${{ parameters.name }}
           owner: ${{ parameters.owner }}
-          system: ${{ parameters.system }}
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
 
     - id: publish

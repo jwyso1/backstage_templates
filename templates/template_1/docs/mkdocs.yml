@@ -3,6 +3,7 @@ site_description: ${{cookiecutter.description}}
 
 nav:
   - Home: index.md
+  - Usage: usage.md
 
 plugins:
   - techdocs-core

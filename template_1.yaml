@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: python-template-1_v30
-  title: python-template-1_v30
+  name: python-template-1
+  title: python-template-1
   description: Dummy template 1
   tags:
     - recommended
@@ -19,7 +19,7 @@ spec:
         project_name:
           title: Name
           type: string
-          description: Unique name of the component
+          description: Unique name of the project
           ui:field: EntityNamePicker
         description:
           title: Description

@@ -1,2 +1,2 @@
-include "common_templates/logger.py"
-{% include "common_templates/logger.py" %}
+include "test/test.py"
+{% include "test/test.py" %}

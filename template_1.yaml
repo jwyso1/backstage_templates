@@ -20,6 +20,7 @@ spec:
           title: Name
           type: string
           description: Unique name of the project
+          ui:field: EntityNamePicker
         description:
           title: Description
           type: string

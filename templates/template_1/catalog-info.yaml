@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: {{cookiecutter.project_name}}
+  name: {{cookiecutter.project_slug}}
   description: {{cookiecutter.description}}
   docs:
     file: docs/docs.yaml

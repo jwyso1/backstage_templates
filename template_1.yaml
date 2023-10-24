@@ -47,6 +47,14 @@ spec:
             - 'Amazon Web Services (aws)'
             - 'Google Cloud Platform (gcp)'
             - 'Microsoft Azure (azure)'
+        command_line_interface:
+          title: Command line interface
+          type: string
+          description: Command line interface tool
+          default: argparse
+          enum:
+            - argparse
+            - None
         dryRun:
           title: Only perform a dry run, don't publish anything
           type: boolean
@@ -84,8 +92,6 @@ spec:
           pypi_username: TODO SS
           project_slug: ${{ parameters.project_name | lower | replace(" ", "_") | replace("-", "_") }}
           version: 0.1.0
-          create_author_file: y
-          time: "time"
 
     - id: publish
       name: Publish

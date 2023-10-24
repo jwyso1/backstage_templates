@@ -1,11 +1,11 @@
 """Console script for ${{ cookiecutter.project_name }}."""
 
-{%- if cookiecutter.command_line_interface|lower == 'argparse' %}
+{%- if cookiecutter.command_line_interface == 'argparse' %}
 import argparse
 {%- endif %}
 import sys
 
-{%- if cookiecutter.command_line_interface|lower == 'argparse' %}
+{%- if cookiecutter.command_line_interface == 'argparse' %}
 def main():
     """Console script for ${{ cookiecutter.project_name }}."""
     parser = argparse.ArgumentParser()

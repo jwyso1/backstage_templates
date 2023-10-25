@@ -8,7 +8,7 @@ metadata:
   annotations:
     github.com/project-slug: {{cookiecutter.destination.repo}}
     backstage.io/techdocs-ref: dir:.
-    {% cookiecutter.jira_project_key != "" %}
+    {% if cookiecutter.jira_project_key != "" %}
     jira/project-key: {{ cookiecutter.jira_project_key }}
     {% endif %}
   tags:

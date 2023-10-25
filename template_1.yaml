@@ -97,6 +97,7 @@ spec:
           pypi_username: TODO SS
           project_slug: ${{ parameters.project_name | lower | replace(" ", "_") | replace("-", "_") }}
           version: 0.1.0
+          jira_project_key: ${{parameters.jira_project_key}}
 
     - id: publish
       name: Publish

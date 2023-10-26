@@ -46,6 +46,46 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
+    - title: testing dependencies
+      required:
+        - storageClassName
+      properties:
+        storageClassName:
+          title: Storage Class Name
+          type: string
+          description: The storage class name
+          default: nfs-client
+          enum:
+            - nfs-client
+            - data-nfs-client
+            - local-path
+      dependencies:
+        storageClassName:
+          oneOf:
+            - properties:
+                storageClassName:
+                  enum:
+                    - nfs-client
+                    - data-nfs-client
+                nfsServer:
+                  title: NFS Server
+                  type: string
+                  description: The NFS server
+                  default: 10.0.0.12
+                nfsPath:
+                  title: NFS Path
+                  type: string
+                  description: The NFS path
+                  default: /mnt/user/kube_storage/python-sample-app
+            - properties:
+                storageClassName:
+                  enum:
+                    - local-storage
+                localPath:
+                  title: Local Path
+                  type: string
+                  description: The local path
+                  default: /mnt/local/python-sample-app
 
   steps:
     - id: fetch-base

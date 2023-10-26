@@ -58,7 +58,7 @@ spec:
           enum:
             - nfs-client
             - data-nfs-client
-            - local-path
+            - local-storage
       dependencies:
         storageClassName:
           oneOf:

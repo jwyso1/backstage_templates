@@ -11,6 +11,7 @@ metadata:
     {% if cookiecutter.jira_project_key != "" %}
     jira/project-key: {{ cookiecutter.jira_project_key }}
     {% endif %}
+    github.com/project-slug: 'RoadieHQ/sample-service'
   tags:
       - python
 spec:

@@ -1,5 +1,6 @@
 import logging
-import tools.constants.logging as t_logger
+import tools.constants.logging as t_constants
+import tools.protocols.logging as t_protocols
 
 logger = logging.getLogger(__name__)
 
@@ -11,9 +12,9 @@ class Logger:
     @staticmethod
     def create_stream_handler(
         log_level: int = logging.WARNING,
-        stream: t_logger.LoggingStream | None = None,
+        stream: t_protocols.LoggingStream | None = None,
     ):
         handler = logging.StreamHandler(stream)
         handler.setLevel(log_level)
-        format = logging.Formatter(t_logger.DEFAULT_FORMATTER)
+        format = logging.Formatter(t_constants.DEFAULT_FORMATTER)
         handler.setFormatter(format)

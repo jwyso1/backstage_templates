@@ -4,8 +4,6 @@
 
 import pytest
 
-from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
-
 
 @pytest.fixture
 def response():
@@ -22,3 +20,7 @@ def test_content(response):
     # from bs4 import BeautifulSoup
     # assert 'GitHub' in BeautifulSoup(response.content).title.string
 
+{%- if cookiecutter.command_line_interface == 'argparse' %}
+def test_cli():
+    assert 1 == 1
+{% endif %}

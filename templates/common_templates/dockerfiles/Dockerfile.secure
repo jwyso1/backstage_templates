@@ -1,0 +1,13 @@
+# Stage 1: Install dependencies
+FROM python:3.9-slim AS builder
+WORKDIR /app
+COPY requirements-secure.txt .
+RUN pip install --target=/app --no-cache-dir -r requirements-secure.txt
+COPY main.py /app/
+
+# Stage 2: Use a distroless image
+FROM gcr.io/distroless/python3-debian10
+WORKDIR /app
+COPY --from=builder /app /app
+USER nonroot
+CMD ["main.py"]

@@ -1,0 +1,23 @@
+ARG BASE_IMAGE
+FROM $BASE_IMAGE
+
+# Use the base image
+FROM $BASE_IMAGE
+
+# Install system dependencies
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends gcc \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install testing and linting dependencies
+COPY requirements-test.txt ./
+RUN pip install --no-cache-dir -r requirements-test.txt
+
+# Copy tests and other CI/CD files into the container
+COPY main.py ./
+COPY tests/ ./tests/
+COPY .flake8 ./
+
+# Run linting and testing as default
+CMD ["sh", "-c", "flake8 --statistics; pytest tests/test.py -v"]

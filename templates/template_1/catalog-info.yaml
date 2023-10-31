@@ -12,7 +12,9 @@ metadata:
     jira/project-key: {{ cookiecutter.jira_project_key }}
     {% endif %}
     #  github.com/project-slug: 'RoadieHQ/sample-service'
-    #  {{cookiecutter.repo_url}}
+    #  {{cookiecutter.destination.host }}
+    #  {{cookiecutter.destination.owner }}
+    #  {{cookiecutter.destination.repo }}
   tags:
       - python
 spec:

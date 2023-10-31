@@ -1,0 +1,1 @@
+{% include "common_templates/.github/workflows/docker_build.yml" without context %}

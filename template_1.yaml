@@ -83,7 +83,6 @@ spec:
       input:
         url: templates
         copyWithoutRender:
-          - common_templates/.github/workflows/*
           - template_2
         values:
           project_name: ${{ parameters.project_name }}

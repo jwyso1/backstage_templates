@@ -1,3 +1,4 @@
+{%- raw -%}
 name: Build and Push Docker Images
 
 on:
@@ -47,3 +48,4 @@ jobs:
           tags: ghcr.io/${{ steps.organization.outputs.lowercase }}/test-image:latest
           build-args: |
             BASE_IMAGE=ghcr.io/${{ steps.organization.outputs.lowercase }}/base-image:latest
+{%- endraw -%}

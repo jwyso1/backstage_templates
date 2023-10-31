@@ -98,6 +98,7 @@ spec:
           project_slug: ${{ parameters.project_name | lower | replace(" ", "_") | replace("-", "_") }}
           version: 0.1.0
           jira_project_key: ${{parameters.jira_project_key}}
+          repo_url: ${{ parameters.repoUrl }}
 
     - id: publish
       name: Publish

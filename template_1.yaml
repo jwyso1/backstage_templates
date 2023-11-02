@@ -104,6 +104,8 @@ spec:
       input:
         command: python
         args:
+          - "-m"
+          - "poetry"
           - "--version"
 
     - id: publish

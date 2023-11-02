@@ -106,7 +106,8 @@ spec:
         args:
           - "-m"
           - "poetry"
-          - "install"
+          - "update"
+          - "--lock"
 
     - id: publish
       name: Publish

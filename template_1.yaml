@@ -100,7 +100,11 @@ spec:
 
     - id: poetry_install
       name: poetry install
-      action: python:poetry:install2
+      action: shell:execute
+      input:
+        command: poetry
+        args:
+          - install
 
     - id: publish
       name: Publish

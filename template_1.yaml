@@ -106,7 +106,7 @@ spec:
         args:
           - "-m"
           - "poetry"
-          - "--version"
+          - "install"
 
     - id: publish
       name: Publish

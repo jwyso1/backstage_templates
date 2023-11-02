@@ -102,9 +102,9 @@ spec:
       name: poetry install
       action: shell:execute
       input:
-        command: echo
+        command: python
         args:
-          - 2137
+          - "--version"
 
     - id: publish
       name: Publish

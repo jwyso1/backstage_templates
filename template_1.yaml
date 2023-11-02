@@ -100,7 +100,7 @@ spec:
 
     - id: poetry_install
       name: poetry install
-      action: python:poetry:install
+      action: echo
 
     - id: publish
       name: Publish

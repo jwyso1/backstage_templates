@@ -102,9 +102,9 @@ spec:
       name: poetry install
       action: shell:execute
       input:
-        command: "cd"
+        command: "ls"
         args:
-          - "ls"
+          - ""
 
     - id: poetry_install
       name: poetry install

@@ -93,18 +93,6 @@ spec:
           items:
             type: object
             properties:
-              array:
-                title: Array string with default value
-                type: string
-                default: value3
-                enum:
-                  - value1
-                  - value2
-                  - value3
-              flag:
-                title: Boolean flag
-                type: boolean
-                ui:widget: radio
               someInput:
                 title: Simple text input
                 type: string
@@ -132,19 +120,14 @@ spec:
 
 
     - id: poetry_install
+      if: ${{ parameters.command !== "" }}
       name: poetry install
       action: shell:execute
+      each: ${{ parameters.iterable }}
       input:
-        command: "cd"
+        command: ${{parameters.command}}
         args:
-          - "template_1"
-#          - "&&"
-#          - "python"
-#          - "-m"
-#          - "poetry"
-#          - "--version"
-#          - "update"
-#          - "--lock"
+          - ${{ each }}
 
     - id: publish
       name: Publish

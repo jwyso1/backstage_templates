@@ -100,6 +100,12 @@ spec:
           version: 0.1.0
           jira_project_key: ${{parameters.jira_project_key}}
 
+    - name: Results
+      if: ${{ parameters.dryRun }}
+      action: debug:log
+      input:
+        listWorkspace: true
+
     - id: poetry_install
       name: poetry install
       action: shell:execute

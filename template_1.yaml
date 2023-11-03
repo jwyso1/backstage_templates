@@ -108,11 +108,11 @@ spec:
 
     - id: poetry_install
       name: poetry install
-      action: shell:execute
-      input:
-        command: "python"
-        args:
-          - "./run_poetry_update.py"
+      action: python:poetry:install
+#      input:
+#        command: "python"
+#        args:
+#          - "./run_poetry_update.py"
 
     - id: publish
       name: Publish

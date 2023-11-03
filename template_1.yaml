@@ -105,9 +105,11 @@ spec:
       name: poetry install
       action: shell:execute
       input:
-        command: "ls"
+        command: "python"
         args:
-          - ""
+          - "-m"
+          - "poetry"
+          - "--version"
 
     - id: publish
       name: Publish

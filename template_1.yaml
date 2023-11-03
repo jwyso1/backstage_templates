@@ -112,7 +112,7 @@ spec:
       input:
         command: "python"
         args:
-          - "run_poetry_update.py"
+          - "./run_poetry_update.py"
 
     - id: publish
       name: Publish

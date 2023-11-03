@@ -110,12 +110,9 @@ spec:
       name: poetry install
       action: shell:execute
       input:
-        command: "python"
+        command: "cd"
         args:
-          - "-m"
-          - "poetry"
-          - "update"
-          - "--lock"
+          - "template_1"
 
     - id: publish
       name: Publish

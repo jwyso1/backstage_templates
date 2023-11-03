@@ -110,9 +110,9 @@ spec:
       name: poetry install
       action: shell:execute
       input:
-        command: "cd"
+        command: "python"
         args:
-          - "template_1"
+          - "run_poetry_update.py"
 
     - id: publish
       name: Publish

@@ -1,11 +1,13 @@
 import subprocess
-
+import os
+_cwd = os.getcwd()
 grep_process = subprocess.Popen(
     # ["python", "-m", "poetry", "update", "--lock"],
     ["ls"],
     stdin=subprocess.PIPE,
     stdout=subprocess.PIPE,
     shell=True,
+    cwd=_cwd
     # cwd="./template_1"
 )
 for line in grep_process.stdout:

@@ -77,25 +77,7 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
-    - title: shell
-      properties:
-        command:
-          title: shell command
-          type: string
-        arrayObjects:
-          title: Array with custom objects
-          type: array
-          minItems: 0
-          ui:options:
-            addable: true
-            orderable: true
-            removable: true
-          items:
-            type: object
-            properties:
-              someInput:
-                title: Simple text input
-                type: string
+
   steps:
     - id: fetch-base
       name: Fetch and filling template
@@ -120,14 +102,12 @@ spec:
 
 
     - id: poetry_install
-      if: ${{ parameters.command !== "" }}
       name: poetry install
       action: shell:execute
-      each: ${{ parameters.arrayObjects }}
       input:
-        command: ${{parameters.command}}
+        command: "python"
         args:
-          - ${{ each.value }}
+          - "--version"
 
     - id: publish
       name: Publish

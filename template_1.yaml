@@ -100,7 +100,6 @@ spec:
           version: 0.1.0
           jira_project_key: ${{parameters.jira_project_key}}
 
-
     - id: poetry_install
       name: poetry install
       action: shell:execute
@@ -109,7 +108,8 @@ spec:
         args:
           - "-m"
           - "poetry"
-          - "--version"
+          - "update"
+          - "--lock"
 
     - id: publish
       name: Publish

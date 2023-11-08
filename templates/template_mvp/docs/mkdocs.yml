@@ -1,0 +1,13 @@
+site_name: ${{cookiecutter.project_slug}}
+site_description: ${{cookiecutter.description}}
+
+nav:
+  - Home: README.md
+  - Installation: installation.md
+  - Usage: USAGE.md
+  - History: HISTORY.md
+  - Authors: authors.md
+  - Contributing: contributing.md
+
+plugins:
+  - techdocs-core

@@ -1,9 +1,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: python-template-1
-  title: python-template-1
-  description: Dummy template 1
+  name: python-template-mvp
+  title: python-template-mvp
+  description: MVP template
   tags:
     - recommended
     - python
@@ -85,6 +85,7 @@ spec:
       input:
         url: templates
         copyWithoutRender:
+          - template_1
           - template_2
         values:
           project_name: ${{ parameters.project_name }}

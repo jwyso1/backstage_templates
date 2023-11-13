@@ -56,11 +56,6 @@ spec:
           enum:
             - argparse
             - None
-        jira_project_key:
-          title: Jira project
-          type: string
-          default: NETAUTOMAT
-          description: Jira project key is used to distinguish one projects tasks with another one. The tasks in jira are conducted with follwing pattern <jira-project-key>-<number> for example NETAUTOMAT-211. Leave empty if you do not want to use JIRA PLUGIN
         dryRun:
           title: Only perform a dry run, don't publish anything
           type: boolean

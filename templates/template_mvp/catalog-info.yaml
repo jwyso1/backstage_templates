@@ -8,11 +8,10 @@ metadata:
   annotations:
     github.com/project-slug: {{cookiecutter.destination.repo}}
     backstage.io/techdocs-ref: dir:.
-    qameta.io/allure-project: my-project-id
   tags:
       - python
 spec:
-  type: website
+  type: service
   lifecycle: experimental  # TODO change to "production" when basic functionality works
   owner: {{cookiecutter.owner}}
 

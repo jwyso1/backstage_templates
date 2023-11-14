@@ -9,12 +9,12 @@ metadata:
     github.com/project-slug: {{cookiecutter.destination.repo}}
     backstage.io/techdocs-ref: dir:.
     datadoghq.com/site: datadoghq.com
-    qameta.io/allure-project: my-project-id
+    qameta.io/allure-project: id
 
   tags:
       - python
 spec:
-  type: website
+  type: service
   lifecycle: experimental  # TODO change to "production" when basic functionality works
   owner: {{cookiecutter.owner}}
 

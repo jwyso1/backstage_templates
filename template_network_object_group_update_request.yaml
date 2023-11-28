@@ -1,9 +1,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: python-template-mvp
-  title: python-template-mvp
-  description: MVP template
+  name: template-network-object-group-update-request
+  title: template-network-object-group-update-request
+  description: template network object group update request.yaml
   tags:
     - recommended
     - python
@@ -29,6 +29,7 @@ spec:
           title: Owner
           type: string
           description: Backstage owner (can be group)
+          default: jwyso1 # TODO change
           ui:field: OwnerPicker
           ui:options:
             allowedKinds:

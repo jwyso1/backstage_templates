@@ -8,8 +8,6 @@ metadata:
   annotations:
     github.com/project-slug: {{cookiecutter.destination.repo}}
     backstage.io/techdocs-ref: dir:.
-    datadoghq.com/site: datadoghq.com
-    qameta.io/allure-project: id
 
   tags:
       - python

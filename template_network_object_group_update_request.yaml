@@ -29,11 +29,73 @@ spec:
           title: Owner
           type: string
           description: Backstage owner (can be group)
-          default: jwyso1 # TODO change
-          ui:field: OwnerPicker
+          default: jwyso1
+
+    - title: Vault parameters
+      required:
+        - vault_env
+        - vault_role
+        - vault_namespace
+        - vault_app_path
+        - vault_mount_point
+      properties:
+        vault_env: #TODO shouldn't it be enum?
+          title: Vault environment
+          type: string
+          default: "prod"
+        vault_role:
+          title: Vault Role
+          type: string
+          default: "aws.islands.infrastructure.network.cnrq_deployment.deploy-hybrid-nog-manual-EgNetwork-CodeBuild.readonly"
+        vault_namespace:
+          title: Vault namespace
+          type: string
+          default: "prod/islands/infrastructure"
+        vault_app_path:
+          title: Vault app path
+          type: string
+          default: "network/kv-v2/cnrq_deployment/credentials"
+        vault_mount_point:
+          title: Vault mount point
+          type: string
+          default: "network/kv-v2"
+
+    - title: Tags
+      required:
+        - repoUrl
+      properties:
+        environment_tag:
+          title: Environment tag
+          type: string
+          default: "PROD"
+        application_tag:
+          title: Environment tag
+          type: string
+          default: "cloud-connectivity"
+        data_classification_tags: #TODO check if it works correctly
+          title: Environment tag
+          type: array
+          minItems: 0
           ui:options:
-            allowedKinds:
-              - Group
+            addable: true
+            orderable: true
+            removable: true
+          items:
+            type: object
+            properties:
+              array:
+                title: Array string with default value
+                type: string
+                default: Confidential
+                enum:
+                  - Confidential
+              flag:
+                title: Boolean flag
+                type: boolean
+                ui:widget: radio
+              someInput:
+                title: Simple text input
+                type: string
 
           
     - title: Choose a location

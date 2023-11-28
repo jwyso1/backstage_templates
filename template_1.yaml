@@ -101,9 +101,9 @@ spec:
       input:
         listWorkspace: true
 
-    - name: Create TestRail project space
-
-    - name: Create ElasticSearch project space
+#    - name: Create TestRail project space
+#
+#    - name: Create ElasticSearch project space
 
     - id: publish
       name: Publish

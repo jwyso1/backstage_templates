@@ -14,7 +14,7 @@ spec:
     - title: Provide basic information about project
       required:
         - project_name
-        - backstage_owner:
+        - backstage_owner
       properties:
         project_name:
           title: Name

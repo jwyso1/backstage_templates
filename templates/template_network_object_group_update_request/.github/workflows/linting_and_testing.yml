@@ -1,0 +1,1 @@
+{% include "common_templates/.github/workflows/linting_and_testing.yml" without context %}

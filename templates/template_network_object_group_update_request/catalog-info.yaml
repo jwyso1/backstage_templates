@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: {{cookiecutter.project_name}}
+  description: {{cookiecutter.description}}
+  docs:
+    file: docs/docs.yaml
+  annotations:
+    github.com/project-slug: {{cookiecutter.destination.repo}}
+    backstage.io/techdocs-ref: dir:.
+    datadoghq.com/site: datadoghq.com
+    qameta.io/allure-project: id
+
+  tags:
+      - python
+spec:
+  type: service
+  lifecycle: experimental  # TODO change to "production" when basic functionality works
+  owner: {{cookiecutter.owner}}
+
+# TODO add more parameters, see them at https://backstage.io/docs/features/software-catalog/descriptor-format/

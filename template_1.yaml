@@ -95,6 +95,10 @@ spec:
           version: 0.1.0
           jira_project_key: ${{parameters.jira_project_key}}
 
+    - id: poetry-install
+      name: poetry install
+      action: python:poetry:install
+
     - name: Results
       if: ${{ parameters.dryRun }}
       action: debug:log
@@ -107,7 +111,6 @@ spec:
 
     - id: publish
       name: Publish
-      if: ${{ parameters.dryRun !== true }}
       action: publish:github
       input:
         sourcePath: template_1
@@ -117,7 +120,6 @@ spec:
 
     - id: register
       name: Register
-      if: ${{ parameters.dryRun !== true }}
       action: catalog:register
       input:
         repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}

@@ -9,5 +9,5 @@ process = subprocess.Popen(
     shell=True,
     cwd=dir_path + "/template_1"
 )
-for line in process.stdout:
+for line in process.stderr:
     print(line)

@@ -10,4 +10,4 @@ process = subprocess.Popen(
     cwd=dir_path + "/template_1"
 )
 for line in process.stdout:
-    print(line.decode("utf-8").strip())
+    print(line)

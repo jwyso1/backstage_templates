@@ -14,12 +14,18 @@ pytest = "^6.0.0"
 pytest-mock = "*"
 isort = "*"
 black = "*"
-flake8 = {version= "*", source="eg-pypi"}
+flake8 = {version= "*", source="eg-internal-pypi"}
 
 [[tool.poetry.source]]
 name = "eg-pypi"
 url = "https://artifactory-edge.expedia.biz/artifactory/api/pypi/pypi"
 priority = "primary"
+
+[[tool.poetry.source]]
+name = "eg-internal-pypi"
+url = "https://artifactory-edge.expedia.biz/artifactory/api/pypi/eg-internal-pypi"
+priority = "primary"
+
 
 [build-system]
 requires = ["poetry-core"]

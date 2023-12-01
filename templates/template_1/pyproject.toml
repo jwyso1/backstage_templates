@@ -16,20 +16,6 @@ isort = "*"
 black = "*"
 flake8 = "*"
 
-[[tool.poetry.source]]
-name = "remote_pypi"
-url = "https://artifactory.expedia.biz/artifactory/api/pypi/pypi/simple"
-priority = "primary"
-
-[[tool.poetry.source]]
-name = "expediagroup-pypi-internal-local"
-url = "https://artifactory.expedia.biz/artifactory/api/pypi/expediagroup-pypi-internal-local/simple"
-priority = "primary"
-
-[[tool.poetry.source]]
-name = "internal-pypi-virtual"
-url = "https://artifactory.expedia.biz/artifactory/api/pypi/internal-pypi-virtual/simple"
-priority = "primary"
 
 [build-system]
 requires = ["poetry-core"]

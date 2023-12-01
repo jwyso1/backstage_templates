@@ -6,7 +6,7 @@ readme = "docs/README.md"
 authors = ["{{cookiecutter.owner}}"]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.9"
 tools = "*"
 
 [tool.poetry.group.test.dependencies]

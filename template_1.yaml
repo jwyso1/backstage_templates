@@ -97,7 +97,7 @@ spec:
 
     - id: poetry-install
       name: poetry install
-      action: python:poetry:install
+      action: python:poetry:install2
 
     - name: Results
       if: ${{ parameters.dryRun }}

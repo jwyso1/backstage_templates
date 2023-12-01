@@ -81,6 +81,8 @@ spec:
         url: templates
         copyWithoutRender:
           - template_2
+          - template_mvp
+          - template_network_object_group_update_request
         values:
           project_name: ${{ parameters.project_name }}
           description: ${{ parameters.description }}

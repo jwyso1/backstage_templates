@@ -7,14 +7,14 @@ authors = ["{{cookiecutter.owner}}"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-tools = "*"
+# tools = "*"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^6.0.0"
 pytest-mock = "*"
 isort = "*"
 black = "*"
-flake8 = {version= "*", source="eg-internal-pypi"}
+flake8 = {version= "*", source="eg-public-pypi-virtual"}
 
 [[tool.poetry.source]]
 name = "eg-pypi"
@@ -26,6 +26,10 @@ name = "eg-internal-pypi"
 url = "https://artifactory-edge.expedia.biz/artifactory/api/pypi/eg-internal-pypi"
 priority = "primary"
 
+[[tool.poetry.source]]
+name = "eg-public-pypi-virtual"
+url = "https://artylab.expedia.biz/api/pypi/public-pypi-virtual"
+priority = "primary"
 
 [build-system]
 requires = ["poetry-core"]

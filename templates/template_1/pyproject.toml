@@ -10,24 +10,11 @@ python = "^3.9"
 # tools = "*"
 
 [tool.poetry.group.test.dependencies]
-pytest = "^6.0.0"
-pytest-mock = "*"
-isort = "*"
-black = {version= "*", source="eg-public-pypi-virtual"}
+myfavouritelibrarywithtools = {version = "*", source ="expediagroup-pypi-internal-local"}
 
 [[tool.poetry.source]]
-name = "eg-pypi"
-url = "https://artifactory-edge.expedia.biz/artifactory/api/pypi/pypi"
-priority = "primary"
-
-[[tool.poetry.source]]
-name = "eg-internal-pypi"
-url = "https://artifactory-edge.expedia.biz/artifactory/api/pypi/eg-internal-pypi"
-priority = "primary"
-
-[[tool.poetry.source]]
-name = "eg-public-pypi-virtual"
-url = "https://artylab.expedia.biz/api/pypi/public-pypi-virtual"
+name = "expediagroup-pypi-internal-local"
+url = "https://artylab.expedia.biz/api/pypi/expediagroup-pypi-internal-local/simple"
 priority = "primary"
 
 [build-system]

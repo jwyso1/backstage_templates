@@ -71,11 +71,11 @@ spec:
           type: string
           default: "PROD"
         application_tag:
-          title: Environment tag
+          title: Application tag
           type: string
           default: "cloud-connectivity"
         data_classification_tags: #TODO check if it works correctly
-          title: Environment tag
+          title: Data classification tags
           type: array
           minItems: 0
           ui:options:
@@ -85,19 +85,10 @@ spec:
           items:
             type: object
             properties:
-              array:
-                title: Array string with default value
-                type: string
-                default: Confidential
-                enum:
-                  - Confidential
-              flag:
-                title: Boolean flag
-                type: boolean
-                ui:widget: radio
               someInput:
                 title: Simple text input
                 type: string
+                default: Confidential
 
 
     - title: Choose a location

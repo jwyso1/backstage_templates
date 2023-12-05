@@ -72,10 +72,12 @@ spec:
           title: Environment tag
           type: string
           default: "PROD"
+          pattern: '^[a-zA-Z0-9]*$'
         application_tag:
           title: Application tag
           type: string
           default: "cloud-connectivity"
+          pattern: '^[a-zA-Z0-9]*$'
         data_classification_tags: #TODO check if it works correctly
           title: Data classification tags
           type: array
@@ -90,8 +92,8 @@ spec:
               someInput:
                 title: Simple text input
                 type: string
-                default: Confidential
-
+                default: confidential
+                pattern: '^[a-zA-Z0-9]*$'
 
     - title: Choose a location
       required:
@@ -131,8 +133,8 @@ spec:
           environment_tag: ${{ parameters.environment_tag }}
           application_tag: ${{ parameters.application_tag }}
           data_classification_tags: ${{ parameters.data_classification_tags }}
-          team_tag: "EgNetwork"
-          brand_tag: "Expedia Services"
+          team_tag: "egnetwork"
+          brand_tag: "expediaservices"
           cost_center_tag: "95310"
           snn_user_owners: "9504f11e2be339002c730fed59da15cc,5e0fd9280f685e40e4b0847022050e5b"
           snn_group_owners: "2c5a6db41ba77090e63d85d7cc4bcbce"

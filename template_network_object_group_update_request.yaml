@@ -129,7 +129,7 @@ spec:
           vault_mount_point: ${{ parameters.vault_mount_point }}
           environment_tag: ${{ parameters.environment_tag }}
           application_tag: ${{ parameters.application_tag }}
-          data_classification_tags: ${{ parameters.data_classification_tags.items }}
+          data_classification_tags: ${{ parameters.data_classification_tags }}
           team_tag: "egnetwork"
           brand_tag: "expediaservices"
           cost_center_tag: "95310"

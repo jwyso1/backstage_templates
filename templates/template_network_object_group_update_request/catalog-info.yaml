@@ -18,8 +18,8 @@ metadata:
     - {{cookiecutter.application_tag}}
     - {{ cookiecutter.data_classification_tags }}
 
-{%- for data_classification_tag in cookiecutter.data_classification_tags %}
-    - {{ data_classification_tag.item }}
+{%- for data_classification_tag in _cookiecutter.data_classification_tags %}
+    - {{ data_classification_tag }}
 {%- endfor %}
 
 spec:

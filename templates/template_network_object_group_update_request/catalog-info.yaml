@@ -16,7 +16,7 @@ metadata:
     - {{cookiecutter.team_tag}}
     - {{cookiecutter.environment_tag}}
     - {{cookiecutter.application_tag}}
-    - {{ data_classification_tag }}
+    - {{ data_classification_tags }}
 
 spec:
   type: service

@@ -17,7 +17,7 @@ metadata:
     - {{cookiecutter.environment_tag}}
     - {{cookiecutter.application_tag}}
 {%- for data_classification_tag in cookiecutter.data_classification_tags %}
-    - {{ data_classification_tag.item }}
+    - {{ data_classification_tag }}
 {% endfor %}
 
 spec:

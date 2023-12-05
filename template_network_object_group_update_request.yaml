@@ -87,13 +87,10 @@ spec:
             orderable: true
             removable: true
           items:
-            type: object
-            properties:
-              item:
-                title: Simple text input
-                type: string
-                default: confidential
-                pattern: '^[a-zA-Z0-9]*$'
+            title: Simple text input
+            type: string
+            default: confidential
+            pattern: '^[a-zA-Z0-9]*$'
 
     - title: Choose a location
       required:

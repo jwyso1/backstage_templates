@@ -150,16 +150,14 @@ spec:
           filename_tenant: "automation_hybrid_nogs"
           file_extension: ".json"
           panorama_version: "v10.1"
-         # panorama_git_user???
-         # panorama_git_repo_url???
-         # panorama_git_repo_name???
+          nog_git_user: "s-connectdc"
+          nog_git_repo_url: "github.expedia.biz/eg-network/netapp-hybrid-nog-manual.git"
+          nog_git_repo_name: "netapp-hybrid-nog-manual"
           panoramas_hil_primary: "10.97.0.48"
           panoramas_hil_secondary: "10.97.0.83"
           panoramas_ash_primary: "10.97.16.41"
-          paronama_ash_secondary: "10.97.16.101"
+          panoramas_ash_secondary: "10.97.16.101"
           donnie_url: "https://donnie.prod.hiflexpoc.expedia.com"
-
-
 
 
     - id: publish

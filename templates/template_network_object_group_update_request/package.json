@@ -1,0 +1,32 @@
+{
+  "vault_env": {{cookiecutter.vault_env}},
+  "vault_addr": {{cookiecutter.vault_addr}},
+  "vault_role": {{cookiecutter.vault_role}},
+  "vault_namespace": {{cookiecutter.vault_namespace}},
+  "vault_app_path": {{cookiecutter.vault_app_path}},
+  "vault_mount_point": {{cookiecutter.vault_mount_point}},
+
+  "snn_user_owners": {{cookiecutter.snn_user_owners}},
+  "snn_group_owners": {{cookiecutter.snn_group_owners}},
+  "commit_message_nog": {{cookiecutter.commit_message_nog}},
+  "commit_message_tenant": {{cookiecutter.commit_message_tenant}},
+  "snow_instance_write": {{cookiecutter.snow_instance_write}},
+  "filename_nog": {{cookiecutter.filename_nog}},
+  "filename_tenant": {{cookiecutter.filename_tenant}},
+  "file_extension": {{cookiecutter.file_extension}},
+  "panorama_version": {{cookiecutter.panorama_version}},
+  "nog_git_user": {{cookiecutter.nog_git_user}},
+  "nog_git_repo_url": {{cookiecutter.nog_git_repo_url}},
+  "nog_git_repo_name": {{cookiecutter.nog_git_repo_name}},
+  "panoramas": {
+    "us_hil": {
+      "primary": {{cookiecutter.panoramas_hil_primary}},
+      "secondary": {{cookiecutter.panoramas_hil_secondary}}
+    },
+    "us_ash": {
+      "primary": {{cookiecutter.panoramas_ash_primary}},
+      "secondary": {{cookiecutter.panoramas_ash_secondary}}
+    }
+  },
+  "donnie_url": {{cookiecutter.donnie_url}}
+}

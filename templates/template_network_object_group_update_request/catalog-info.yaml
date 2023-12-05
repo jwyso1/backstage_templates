@@ -10,14 +10,14 @@ metadata:
     backstage.io/techdocs-ref: dir:.
 
   tags:
-      - python
-      - CostCenter-{{cookiecutter.cost_center_tag}}
-      - {{cookiecutter.brand_tag}}
-      - {{cookiecutter.team_tag}}
-      - {{cookiecutter.environment_tag}}
-      - {{cookiecutter.application_tag}}
+    - python
+    - CostCenter-{{cookiecutter.cost_center_tag}}
+    - {{cookiecutter.brand_tag}}
+    - {{cookiecutter.team_tag}}
+    - {{cookiecutter.environment_tag}}
+    - {{cookiecutter.application_tag}}
 {%- for data_classification_tag in cookiecutter.data_classification_tags %}
-      - {{ data_classification_tag }}
+    - {{ data_classification_tag }}
 {% endfor %}
 spec:
   type: service

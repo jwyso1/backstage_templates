@@ -81,7 +81,7 @@ spec:
         data_classification_tags:
           title: Data classification tags
           type: array
-          minItems: 0
+          minItems: 1
           ui:options:
             addable: true
             orderable: true
@@ -89,7 +89,7 @@ spec:
           items:
             type: object
             properties:
-              someInput:
+              item:
                 title: Simple text input
                 type: string
                 default: confidential

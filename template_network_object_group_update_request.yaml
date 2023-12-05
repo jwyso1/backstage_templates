@@ -14,7 +14,7 @@ spec:
     - title: Provide basic information about project
       required:
         - project_name
-        - backstage_owner
+        - owner
       properties:
         project_name:
           title: Name
@@ -25,7 +25,7 @@ spec:
           title: Description
           type: string
           description: In few words help others understand what this application is for.
-        backstage_owner:
+        owner:
           title: Owner
           type: string
           description: Backstage owner (can be group)
@@ -119,7 +119,7 @@ spec:
           project_name: ${{ parameters.project_name }}
           description: ${{ parameters.description }}
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
-          backstage_owner: ${{ parameters.backstage_owner }}
+          owner: ${{ parameters.owner }}
           project_slug: ${{ parameters.project_name | lower | replace(" ", "_") | replace("-", "_") }}
           version: 0.1.0
           vault_env: ${{ parameters.vault_env }}

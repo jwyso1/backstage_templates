@@ -64,7 +64,9 @@ spec:
 
     - title: Tags
       required:
-        - repoUrl
+        - data_classification_tags
+        - application_tag
+        - environment_tag
       properties:
         environment_tag:
           title: Environment tag

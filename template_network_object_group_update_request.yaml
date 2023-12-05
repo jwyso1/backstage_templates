@@ -71,14 +71,14 @@ spec:
         environment_tag:
           title: Environment tag
           type: string
-          default: "PROD"
+          default: "prod"
           pattern: '^[a-zA-Z0-9]*$'
         application_tag:
           title: Application tag
           type: string
-          default: "cloud-connectivity"
+          default: "cloudconnectivity"
           pattern: '^[a-zA-Z0-9]*$'
-        data_classification_tags: #TODO check if it works correctly
+        data_classification_tags:
           title: Data classification tags
           type: array
           minItems: 0

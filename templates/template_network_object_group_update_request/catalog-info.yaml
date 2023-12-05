@@ -16,7 +16,7 @@ metadata:
     - {{cookiecutter.team_tag}}
     - {{cookiecutter.environment_tag}}
     - {{cookiecutter.application_tag}}
-{%- for data_classification_tag in cookiecutter.data_classification_tags %}
+{%- for data_classification_tag in cookiecutter.data_classification_tags.items %}
     - {{ data_classification_tag }}
 {% endfor %}
 
